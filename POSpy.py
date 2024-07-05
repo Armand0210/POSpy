@@ -1,6 +1,6 @@
 items_list = []
 
-# Function to add items
+#add items
 def add_item(item):
     try:
         name, price_str = item.rsplit(' ', 1)
@@ -10,7 +10,7 @@ def add_item(item):
     except ValueError:
         print(f"Invalid input format. Please enter item name and price (e.g., Cheese R50.00).")
 
-# Function to remove items
+#remove items
 def remove_item(item):
     for i, (name, price) in enumerate(items_list):
         if name == item:
@@ -33,7 +33,7 @@ def display_items_and_total():
     print("---------------")
     print(f"Total R{total:.2f}")
 
-# Function to run the POS system
+#run the POS system
 def run_pos_system():
     while True:
         print("\nWelcome to the POS system!")
@@ -58,6 +58,6 @@ def run_pos_system():
         else:
             print("Invalid choice. Please enter a valid option (1/2/3/4).")
 
-# Main function to start the POS system
+#start the POS system
 if __name__ == "__main__":
     run_pos_system()
